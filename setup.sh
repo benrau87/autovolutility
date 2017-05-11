@@ -100,9 +100,10 @@ systemctl enable mongodb &>> $logfile
 error_check 'MongoDB Setup'
 
 ##PIP packages
+print_status "${YELLOW}Setting up PIP${NC}"
 pip install --upgrade pip &>> $logfile
-pip install distorm3 pycrypto pillow ujson
-
+pip install distorm3 pycrypto pillow ujson  &>> $logfile
+error_check 'PIP ready'
 ##Yara
 cd $gitdir
 print_status "${YELLOW}Downloading Yara${NC}"
