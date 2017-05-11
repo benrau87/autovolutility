@@ -89,7 +89,7 @@ error_check 'Updated system'
 
 ##Main Packages
 print_status "${YELLOW}Downloading and installing depos${NC}"
-apt-get install -y build-essential checkinstall libjansson-dev python-dev python-pip pcregrep libpcre++-dev automake libtool gcc unzip libssl-dev mongodb-org &>> $logfile
+apt-get install -y build-essential checkinstall libjansson-dev python-dev automake make gcc libmagic-dev byacc python-pip pcregrep libpcre++-dev libtool  flex bison gcc unzip libssl-dev mongodb-org &>> $logfile
 
 ##Start mongodb 
 print_status "${YELLOW}Setting up MongoDB${NC}"
