@@ -139,4 +139,6 @@ cd $gitdir
 print_status "${YELLOW}Setting up Volutility${NC}"
 git clone https://github.com/kevthehermit/VolUtility &>> $logfile
 cd VolUtility
-pip install -r requirements.txt
+pip install -r requirements.txt  &>> $logfile
+
+print_status "${YELLOW}Finished installation${NC}"
