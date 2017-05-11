@@ -123,6 +123,19 @@ make install &>> $logfile
 make check &>> $logfile
 error_check 'Yara installed'
 
+##PST Viewer
+cd $gitdir
+print_status "${YELLOW}Setting up PST Viewer${NC}"
+git clone https://github.com/libyal/libpff.git &>> $logfile
+cd libpff/ &>> $logfile
+./synclibs.sh &>> $logfile
+./autogen.sh &>> $logfile
+./configure --enable-python &>> $logfile
+make &>> $logfile
+make install &>> $logfile
+ldconfig &>> $logfile
+error_check 'PST Viewer installed'
+
 ##Volatility
 cd $gitdir
 print_status "${YELLOW}Setting up Volatility${NC}"
