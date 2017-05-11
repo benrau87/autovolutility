@@ -148,10 +148,12 @@ python setup.py install &>> $logfile
 error_check 'Volatility installed'
 
 ##Volutility
-cd $gitdir
+cd /etc/
 print_status "${YELLOW}Setting up Volutility${NC}"
 git clone https://github.com/kevthehermit/VolUtility &>> $logfile
 cd VolUtility
 pip install -r requirements.txt  &>> $logfile
-python manage migrate
+git clone https://github.com/yara-rules/rules.git  &>> $logfile
+cp rules/**/*.yar /etc/VolUtility/yararules/ &>> $logfile
+python manage migrate  &>> $logfile
 print_status "${YELLOW}Finished installation${NC}"
