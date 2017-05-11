@@ -85,7 +85,7 @@ done
 ##Update
 print_status "${YELLOW}Performing apt-get update and upgrade (May take a while if this is a fresh install)..${NC}"
 apt-get update &>> $logfile && apt-get -y dist-upgrade &>> $logfile
-error_check 'Updated system
+error_check 'Updated system'
 
 ##Main Packages
 print_status "${YELLOW}Downloading and installing depos${NC}"
