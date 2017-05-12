@@ -154,8 +154,7 @@ git clone https://github.com/kevthehermit/VolUtility &>> $logfile
 cd VolUtility
 pip install -r requirements.txt  &>> $logfile
 rm yararules/*.yar
-git clone https://github.com/yara-rules/rules.git  &>> $logfile
-cp rules/**/*.yar /etc/VolUtility/yararules/ &>> $logfile
+cp $gitdir/createallyararules.sh /etc/VolUtility/
 bash $gitdir/createallyararules.sh &>> $logfile
 python manage.py migrate  &>> $logfile
 print_status "${YELLOW}Finished installation${NC}"
