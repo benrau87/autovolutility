@@ -15,14 +15,14 @@ else
 fi
 #Remove non working rules
 cd /etc/VolUtility/
-rm rules/Android* 
-rm rules/vmdetect.yar  
-rm rules/antidebug_antivm.yar  
-rm rules/MALW_AdGholas.yar  
-rm rules/APT_Shamoon*.yar  
-rm rules/peid.yar 
 #Copy over rule 
-cp rules/**/*.yar /etc/VolUtility/yararules/
+cp rules/**/*.yar yararules/
+rm yararules/Android* 
+rm yararules/vmdetect.yar  
+rm yararules/antidebug_antivm.yar  
+rm yararules/MALW_AdGholas.yar  
+rm yararules/APT_Shamoon*.yar  
+rm yararules/peid.yar 
 #Create allrule.yar index
 touch allrules.yar
 ls /etc/VolUtility/yararules >allrules.yar
