@@ -1,5 +1,5 @@
 #!/bin/bash
-
-bash /etc/VolUtility/createyararules.sh
-python /etc/VolUtility/manage.py runserver 0.0.0.0:80
+cd /etc/VolUtility/
+bash createallyararules.sh
+python manage.py runserver 0.0.0.0:80
 
