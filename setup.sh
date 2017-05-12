@@ -155,6 +155,6 @@ cd VolUtility
 pip install -r requirements.txt  &>> $logfile
 rm yararules/*.yar
 cp $gitdir/createallyararules.sh /etc/VolUtility/
-bash $gitdir/createallyararules.sh &>> $logfile
+bash /etc/VolUtility/createallyararules.sh &>> $logfile
 python manage.py migrate  &>> $logfile
 print_status "${YELLOW}Finished installation${NC}"
