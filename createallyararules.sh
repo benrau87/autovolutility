@@ -6,7 +6,7 @@ if [ -d /etc/VolUtility/rules ]; then
     cd /etc/VolUtility/rules
     git pull
 else
-  git clone https://github.com/VirusTotal/yara.git
+  https://github.com/Yara-Rules/rules.git
 fi
 #Remove non working rules
 #Copy over rules 
