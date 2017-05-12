@@ -153,6 +153,7 @@ print_status "${YELLOW}Setting up Volutility${NC}"
 git clone https://github.com/kevthehermit/VolUtility &>> $logfile
 cd VolUtility
 pip install -r requirements.txt  &>> $logfile
+rm yararules/*.yar
 git clone https://github.com/yara-rules/rules.git  &>> $logfile
 cp rules/**/*.yar /etc/VolUtility/yararules/ &>> $logfile
 bash $gitdir/createallyararules.sh &>> $logfile
