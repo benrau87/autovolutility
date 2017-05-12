@@ -8,6 +8,12 @@ do
 done
 
 git clone https://github.com/VirusTotal/yara.git
+rm etc/VolUtility/rules/Android* 
+rm etc/VolUtility/rules/vmdetect.yar  
+rm etc/VolUtility/rules/antidebug_antivm.yar  
+rm etc/VolUtility/rules/MALW_AdGholas.yar  
+rm etc/VolUtility/rules/APT_Shamoon*.yar  
+rm etc/VolUtility/rules/peid.yar 
 cp rules/**/*.yar /etc/VolUtility/yararules/ &>> $logfile
 touch allrules.yar
 ls /etc/VolUtility/yararules >allrules.yar
