@@ -7,7 +7,7 @@ do
   rm /etc/VolUtility/yararules/allrules.yar
 done
 #check for existing rule directory and update
-if [-d /etc/VolUtility/rules ]; then
+if [ -d /etc/VolUtility/rules ]; then
     cd /etc/VolUtility/rules
     git pull
 else
