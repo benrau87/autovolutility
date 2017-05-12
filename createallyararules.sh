@@ -1,7 +1,12 @@
 #!/bin /bash
 #use to create an index to include all yara rules in the /etc/VolUtility/yararules/   path
 cd /etc/VolUtility/
-rm /etc/VolUtility/yararules/allrules.yar
+
+while [ ! -f /etc/VolUtility/yararules/allrules.yar ]
+do
+  rm /etc/VolUtility/yararules/allrules.yar
+done
+
 git clone https://github.com/VirusTotal/yara.git
 cp rules/**/*.yar /etc/VolUtility/yararules/ &>> $logfile
 touch allrules.yar
